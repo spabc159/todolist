@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="CSS/main.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="main">
+	<!-- 导航栏 -->
+	<div class="narbar narbar-default">TODOLIST</div>
+
+	<div class="header">每天要做的事情</div>
+	
+	<!-- 表单 -->
+	<!-- sumbit.prevent 当它提交的时候交给我们自己处理 -->
+	<form v-on:submit.prevent="add" id="task-form">
+		<div class="wrap">
+			<input id="task-input" v-model="current.title" class="form-control" type="text">
+			<!-- 点击加号添加 -->
+			<button class="btn btn-default" type="submit">新建</button>
+		</div>
+	</form>
+
+	<!-- 未完成 -->
+	<div class="task-list">
+		<div class="wrap">
+			未完成
+			<!-- 给每个创建的todo增加一个独立的id -->
+			<div v-for="(todo, index) in list" class="item">
+				
+				{{todo.title}}  
+				<button @click="remove(index)">X</button>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- 已完成 -->
+	<div class="task-list">
+		<div class="wrap">
+			已完成
+			<div class="complete item">
+				875878345648
+			</div>
+		</div>
+		
+	</div>
+	</div>
+
+
+	<script type="text/javascript" src="JS/vue.js"></script>
+	<script type="text/javascript" src="JS/JSON.js"></script>
+	<script type="text/javascript" src="JS/main.js"></script>
+	
+</body>
+</html>

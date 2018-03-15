@@ -1,0 +1,32 @@
+*{
+	background: rgba(0,0,0,.05);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+input, button{
+	
+	border-radius: 10px;
+}
+input{
+	display: block;
+	width: 100%;
+}
+
+.wrap{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.narbar, .header{
+	
+	padding: 20px 0;
+	text-align: center;
+
+}
+
+.narbar{
+	border: 1px solid #555;
+}
+
